@@ -4,14 +4,13 @@
 ![Version](https://img.shields.io/badge/Version-v1-blue.svg)
 
 #MassBatch for [Tesseract](https://github.com/tesseract-ocr/tesseract)
-by Manuel Vargas
 
 Create a batch file for mass executing tesseract conversions. This program will grab all png/tiff files in the current directory and create the batch file. You still have to execute the file yourself.
 
 This will make the output file name be the same as the original (but will not replace the original because the new file will be a .txt file)
 
 ##How
-This is achieved by reading all the file names in the current directory and adding them each into a formated file for execution.
+This is achieved by reading all the file names in the current directory and adding them each into a formated file for execution. Make sure to have tesseract already installed and in your [path](https://www.google.com/search?q=add+directory+to+path+windows). 
 
 ###Compile
 
@@ -22,10 +21,16 @@ Make sure to be in the directory where your files are located.
 	
 	./mb
 	
+###Output
+	@echo off
+	tesseract doc_53.png doc_53
+	tesseract doc_54.png doc_54
+	tesseract doc_55.png doc_55
+	
 ##Customizations
 
 ###Filetypes
-More extensions can be added depends on your files or if your entire directory is all just images you can remove this condition
+More file extensions can be added depends on your files or if your entire directory is all just images you can remove this condition.
 
 	if(extension==".png" || extension==".tiff")
 		
