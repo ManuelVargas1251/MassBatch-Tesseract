@@ -39,9 +39,9 @@ More file extensions can be added depends on your files or if your entire direct
 	ofstream out("massbatch.bat");
 	
 ###Text File Names
-In the code I made it so the file would be named the same. If you would like a different name, replace the 'rawname' variable below:
+In the code I made it so the file would be named the same as the original. If you would like a different name, replace the '**rawname**' variable below:
 
-	out<<"tesseract "<<ent->d_name<<" "<<rawname<<endl;
+	out<<"tesseract "<<ent->d_name<<" "<<<<endl;
 	
 ###Change Directory
 Replace what is inside the double quotes with your desired location
@@ -49,7 +49,7 @@ Replace what is inside the double quotes with your desired location
 	if ((dir = opendir ("./")) != NULL)
 	
 ###Other
-To add any of tesseract's many [options](https://github.com/tesseract-ocr/tesseract/wiki#running-tesseract), add a string after the 'rawname' variable.
+To add any of tesseract's many [options](https://github.com/tesseract-ocr/tesseract/wiki#running-tesseract), add a string after the '**rawname**' variable.
 
 	out<<"tesseract "<<ent->d_name<<" "<<rawname<<" -l deu pdf"<<endl;
 	
