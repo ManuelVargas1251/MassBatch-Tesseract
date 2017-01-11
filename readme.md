@@ -1,7 +1,7 @@
 <!-- using shields.io for status buttons -->
 ![Programming Language](https://img.shields.io/badge/Language-C++-black.svg)
 ![Status](https://img.shields.io/badge/Status-Passing-green.svg)
-![Version](https://img.shields.io/badge/Version-v1-blue.svg)
+![Version](https://img.shields.io/badge/Version-1.0-blue.svg)
 
 #MassBatch for [Tesseract](https://github.com/tesseract-ocr/tesseract)
 
@@ -47,8 +47,13 @@ In the code I made it so the file would be named the same. If you would like a d
 Replace what is inside the double quotes with your desired location
 
 	if ((dir = opendir ("./")) != NULL)
-			
-##References:	
+	
+###Other
+To add any of tesseract's many [options](https://github.com/tesseract-ocr/tesseract/wiki#running-tesseract), add a string after the 'rawname' variable.
+
+	out<<"tesseract "<<ent->d_name<<" "<<rawname<<" -l deu pdf"<<endl;
+	
+##References
 * List directory
 http://stackoverflow.com/a/612176/7298219
 
