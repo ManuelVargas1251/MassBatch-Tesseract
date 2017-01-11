@@ -10,7 +10,7 @@ Create a batch file for mass executing tesseract conversions. This program will 
 This will make the output file name be the same as the original (but will not replace the original because the new file will be a .txt file)
 
 ##How
-This is achieved by reading all the file names in the current directory and adding them each into a formated file for execution. Make sure to have tesseract already installed and in your [path](https://www.google.com/search?q=add+directory+to+path+windows). 
+This is achieved by reading all the file names in the current directory and adding them each into a formated file for execution. Make sure to have tesseract already [installed](https://github.com/tesseract-ocr/tesseract/wiki#installation) and in your [path](https://www.google.com/search?q=add+directory+to+path+windows). 
 
 ###Compile
 
@@ -21,7 +21,17 @@ Make sure to be in the directory where your files are located.
 	
 	./mb
 	
-###Output
+###Command Line Output
+
+	Starting...
+	Creating batch file
+		-doc_53.tiff
+		-doc_54.png
+		-doc_55.png
+	Batch file complete
+	3 files added.
+
+###Output Batch File
 	@echo off
 	tesseract doc_53.png doc_53
 	tesseract doc_54.png doc_54
@@ -54,8 +64,6 @@ To add any of tesseract's many [options](https://github.com/tesseract-ocr/tesser
 	out<<"tesseract "<<ent->d_name<<" "<<rawname<<" -l deu pdf"<<endl;
 	
 ##References
-* List directory
-http://stackoverflow.com/a/612176/7298219
+* [List Directory](http://stackoverflow.com/a/612176/7298219)
 
-* Remove File Extension
-http://stackoverflow.com/a/6417880/7298219
+* [Remove File Extension](http://stackoverflow.com/a/6417880/7298219)

@@ -21,8 +21,6 @@ int main(){
 	ofstream out("massbatch.bat");
 	out<<"@echo off"<<endl;
 	
-	//
-	cout<<"Listing..."<<endl;
 	cout<<"Creating batch file..."<<endl;
 	
 	if ((dir = opendir ("./")) != NULL) {
@@ -43,9 +41,7 @@ int main(){
 					
 					//only png/tiff files will be added
 					if(extension==".png" || extension==".tiff"){
-						cout<<"\t#"<<ent->d_name<<endl;	//print filename
-						cout<<"\t-ext: "<<extension<<endl;	//print file extension
-						cout<<"\t-last index: "<<lastindex<<endl;	//print location of last delimiter
+						cout<<"\t-"<<ent->d_name<<endl;	//print filename
 						out<<"tesseract "<<ent->d_name<<" "<<rawname<<endl;	//write to file
 						num_of_files++;	//counts how many files are being added
 					}
@@ -62,8 +58,7 @@ int main(){
 	}
 	
 	//Final output
-	cout<<"Batch file created"<<endl;
+	cout<<"Batch file complete"<<endl;
 	cout<<num_of_files<<" files added."<<endl;
 	out.close();	//closes stream
-	return 0;
 }
