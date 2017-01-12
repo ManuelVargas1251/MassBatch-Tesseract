@@ -52,7 +52,6 @@ int main(){
 		closedir (dir);
 	}
 	else {
-		//couldn't open directory
 		cout<<"could not open directory"<<endl;
 		return 0;
 	}

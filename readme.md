@@ -22,13 +22,15 @@ Make sure to be in the directory where your files are located.
 	
 	./mb
 	
-You can double-click the file or run:
+Now That you're batch file has been created you can run it by double-click the file or typing:
 	
 	./massbatch.bat
 
-If you get '**permission denied**', add:
+If you get '**permission denied**' type:
 
 	chmod 700 massbatch.bat
+
+and try again.
 
 ###Command Line Output
 
@@ -49,7 +51,7 @@ If you get '**permission denied**', add:
 ##Customizations
 
 ###Filetypes
-More file extensions can be added depends on your files or if your entire directory is all just images you can remove this condition.
+More file extensions can be added depending on your files or if your entire directory is all just images you can remove this condition.
 
 	if(extension==".png" || extension==".tiff")
 		
