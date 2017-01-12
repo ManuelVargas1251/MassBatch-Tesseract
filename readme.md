@@ -13,14 +13,23 @@ This will make the output file name be the same as the original (but will not re
 This is achieved by reading all the file names in the current directory and adding them each into a formated file for execution. Make sure to have tesseract already [installed](https://github.com/tesseract-ocr/tesseract/wiki#installation) and in your [path](https://www.google.com/search?q=add+directory+to+path+windows). 
 
 ###Compile
+Make sure that you have admin rights when compiling or the batch file will not have the appropriate permissions to run.
 
-	g++ massbatch.cpp -o mb
+	g++ massbatch.cpp -o mb 
 	
 ###Run
 Make sure to be in the directory where your files are located.
 	
 	./mb
 	
+You can double-click the file or run:
+	
+	./massbatch.bat
+
+If you get '**permission denied**', add:
+
+	chmod 700 massbatch.bat
+
 ###Command Line Output
 
 	Starting...
@@ -31,7 +40,7 @@ Make sure to be in the directory where your files are located.
 	Batch file complete
 	3 files added.
 
-###Output Batch File
+###Batch File Output 
 	@echo off
 	tesseract doc_53.png doc_53
 	tesseract doc_54.png doc_54
@@ -45,6 +54,7 @@ More file extensions can be added depends on your files or if your entire direct
 	if(extension==".png" || extension==".tiff")
 		
 ###Batch File Name
+Rename your output batch file here. You could also change the file extension to work on linux (*.sh)
 
 	ofstream out("massbatch.bat");
 	
@@ -64,6 +74,6 @@ To add any of tesseract's many [options](https://github.com/tesseract-ocr/tesser
 	out<<"tesseract "<<ent->d_name<<" "<<rawname<<" -l deu pdf"<<endl;
 	
 ##References
-* [List Directory](http://stackoverflow.com/a/612176/7298219)
+* [List Directory](http://stackoverflow.com/a/612176)
 
-* [Remove File Extension](http://stackoverflow.com/a/6417880/7298219)
+* [Remove File Extension](http://stackoverflow.com/a/6417880)

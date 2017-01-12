@@ -56,9 +56,8 @@ int main(){
 		cout<<"could not open directory"<<endl;
 		return 0;
 	}
-	
 	//Final output
-	cout<<"Batch file complete"<<endl;
 	cout<<num_of_files<<" files added."<<endl;
+	cout<<"Batch file complete"<<endl;
 	out.close();	//closes stream
 }
