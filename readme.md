@@ -53,7 +53,8 @@ and try again.
 ###Filetypes
 More file extensions can be added depending on your files or if your entire directory is all just images you can remove this condition.
 
-	43| if(extension==".png" || extension==".tiff")
+	43| if(extension==".png" || extension==".tiff")	//default
+	43| if(extension==".png" || extension==".tiff" || extension=".jpg" || "extension=".gif")
 		
 ###Batch File Name
 Rename your output batch file here. You could also change the file extension to work on linux (*.sh)
@@ -63,19 +64,20 @@ Rename your output batch file here. You could also change the file extension to 
 ###Text File Names
 In the code I made it so the file would be named the same as the original. If you would like a different name, replace the '**rawname**' variable below:
 
-	45| out<<"tesseract "<<ent->d_name<<" "<<rawname<<endl;			//original
+	45| out<<"tesseract "<<ent->d_name<<" "<<rawname<<endl;			//default
 	45| out<<"tesseract "<<ent->d_name<<" "<<"mytextfile_"<<num_of_files<<endl;		//custom name with incrementation
 
 	
 ###Change Directory
 Replace what is inside the double quotes with your desired location
 
-	26| if ((dir = opendir ("./")) != NULL)
+	26| if ((dir = opendir ("./")) != NULL)	//default
 	
 ###Other
 To add any of tesseract's many [options](https://github.com/tesseract-ocr/tesseract/wiki#running-tesseract), add a string after the '**rawname**' variable.
 
 	45| out<<"tesseract "<<ent->d_name<<" "<<rawname<<" -l deu pdf"<<endl;
+	45| out<<"tesseract "<<ent->d_name<<" "<<rawname<<" -l eng+deu hocr"<<endl;
 	
 ##References
 * [List Directory](http://stackoverflow.com/a/612176)
