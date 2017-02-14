@@ -1,7 +1,6 @@
 /*
 MassBatch for Tesseract by Manuel Vargas
 1/11/17
-
 */
 #include<iostream>
 #include<dirent.h>
@@ -40,9 +39,9 @@ int main(){
 					string extension = file_name.substr(lastindex, file_name.length());
 					
 					//only png/tiff files will be added
-					if(extension==".png" || extension==".tiff"){
-						cout<<"\t-"<<ent->d_name<<endl;	//print filename
-						out<<"tesseract "<<ent->d_name<<" "<<rawname<<endl;	//write to file
+					if(extension==".png" || extension==".tiff" || extension==".jpg"){
+						cout<<"\t-"<<ent->d_name<<endl;	//print filename to console
+						out<<"tesseract \""<<ent->d_name<<"\" \""<<rawname<<"\""<<endl;	//write to file
 						num_of_files++;	//counts how many files are being added
 					}
 				}
