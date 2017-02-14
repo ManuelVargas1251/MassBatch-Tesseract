@@ -82,7 +82,7 @@ To add any of tesseract's many [options](https://github.com/tesseract-ocr/tesser
 	44| out<<"tesseract "<<ent->d_name<<" "<<rawname<<" -l eng+deu hocr"<<endl;
 
 ##Change Log
-###1.0.1 - 2/14/17
+###1.1 - 2/14/17
 * File names with spaces are now accepted
 * File extension 'jpg' is now a default
 
