@@ -8,7 +8,7 @@
 MassBatch is a console application for Windows that will create a batch file for mass executing [Tesseract](https://github.com/tesseract-ocr/tesseract) conversions; this program will grab all png/tiff/jpg files (by default) in the current directory and create a batch file. This is achieved by scanning all file names in the current directory and adding them each into a formated batch file for execution.
 
 ##Running MassBatch
-You can download MassBatch [here](https://github.com/ManuelVargas1251/MassBatch-Tesseract/raw/master/Debug/MassBatch.exe). Run the program in the directory where you have your image files. A new batch file called "MassBatch.bat" will be created containing all the tesseract commands for each image conversion for you to run.
+You can download MassBatch [here](https://github.com/ManuelVargas1251/MassBatch-Tesseract/raw/master/Release/MassBatch.exe). Run the program in the directory where you have your image files. A new batch file called "MassBatch.bat" will be created containing all the tesseract commands for each image conversion for you to run.
 
 Or compile your own by loading the project files into VS. Make sure to add [dirent](https://github.com/tronkko/dirent) to your VS library.
 
