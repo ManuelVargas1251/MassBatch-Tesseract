@@ -36,46 +36,60 @@ Or compile your own by loading the project files into VS. Make sure to add [dire
 ###Batch File Name
 Rename your output batch file
 
-	21| ofstream out("massbatch.bat");		//default
-	21| ofstream out("my_mb.bat");			//custom
-	21| ofstream out("massbatch.sh");		//bash?
+```
+21| ofstream out("massbatch.bat");		//default
+21| ofstream out("my_mb.bat");			//custom
+21| ofstream out("massbatch.sh");		//bash?
+```
 
 ###Change Directory
 Replace "**./**" with your custom directory
 
-	26| if ((dir = opendir ("./")) != NULL)	//default
+```
+26| if ((dir = opendir ("./")) != NULL)	//default
+```
 
 ###Filetypes
 More file extensions can be added depending on your files or if your directory is just images, you can remove this condition.
 
-	43| if(extension==".png" || extension==".tiff" || extension=".jpg")	//default
-	43| if(extension==".png" || extension==".tiff" || extension=".jpg" || "extension=".gif")
-	
+```
+43| if(extension==".png" || extension==".tiff" || extension=".jpg")	//default
+43| if(extension==".png" || extension==".tiff" || extension=".jpg" || "extension=".gif")
+```	
+
 ###Text File Names
 Output files will be named the same as the original. For a custom name, replace the "**rawname**" variable below:
 
-	45| out<<"tesseract \""<<ent->d_name<<"\" \""<<rawname<<"\""<<endl;		//default
-	45| out<<"tesseract "<<ent->d_name<<" "<<"mytextfile_"<<num_of_files<<endl;		//custom name with incrementation
+```
+45| out<<"tesseract \""<<ent->d_name<<"\" \""<<rawname<<"\""<<endl;		//default
+45| out<<"tesseract "<<ent->d_name<<" "<<"mytextfile_"<<num_of_files<<endl;		//custom name with incrementation
+```
 
 ###Other
 To add any of tesseract's [options](https://github.com/tesseract-ocr/tesseract/wiki#running-tesseract), add a string after the **rawname** variable.
 
-	45| out<<"tesseract "<<ent->d_name<<" "<<rawname<<endl;		//default
-	45| out<<"tesseract "<<ent->d_name<<" "<<rawname<<" -l deu pdf"<<endl;	//german & pdf output
-	45| out<<"tesseract "<<ent->d_name<<" "<<rawname<<" -l eng hocr"<<endl;	//english & hocr mode
+```
+45| out<<"tesseract "<<ent->d_name<<" "<<rawname<<endl;		//default
+45| out<<"tesseract "<<ent->d_name<<" "<<rawname<<" -l deu pdf"<<endl;	//german & pdf output
+45| out<<"tesseract "<<ent->d_name<<" "<<rawname<<" -l eng hocr"<<endl;	//english & hocr mode
+```
 
 ##Change Log
-1.2: 2/19/17
+1.2.1 - 2/28/17
+* Created release executable
+
+1.2 - 2/19/17
 * Converted to console application; no longer need to compile, just run the exe
 
-1.1: 2/14/17
+1.1 - 2/14/17
 * File names with spaces are now accepted
 * File extension 'jpg' is now a default
 
-1.0: 1/11/17
+1.0 - 1/11/17
 * Initial release
 
 ##References
+
 * [List Directory](http://stackoverflow.com/a/612176)
 
 * [Remove File Extension](http://stackoverflow.com/a/6417880)
