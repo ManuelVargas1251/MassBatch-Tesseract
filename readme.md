@@ -1,7 +1,7 @@
 <!-- using shields.io for status buttons -->
 ![Programming Language](https://img.shields.io/badge/Language-C++-black.svg)
 ![Status](https://img.shields.io/badge/Status-Passing-brightgreen.svg)
-![Version](https://img.shields.io/badge/Version-1.2-blue.svg)
+![Version](https://img.shields.io/badge/Version-1.2.1-blue.svg)
 
 #MassBatch for [Tesseract](https://github.com/tesseract-ocr/tesseract)
 
